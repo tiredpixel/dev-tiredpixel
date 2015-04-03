@@ -1,0 +1,2 @@
+- https://packagecontrol.io/installation#st2
+- http://wbond.net/sublime_packages/alignment

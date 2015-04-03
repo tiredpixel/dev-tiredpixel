@@ -1,0 +1,1 @@
+pmset -a destroyfvkeyonstandby 1 hibernatemode 25 standbydelay 0

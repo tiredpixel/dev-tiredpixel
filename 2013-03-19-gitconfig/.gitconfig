@@ -1,0 +1,17 @@
+[user]
+    name = NAME
+    email = EMAIL
+[color]
+    ui = auto
+[pack]
+    threads = 0
+[diff]
+    renames = copies
+[core]
+    excludesfile = ~/.gitignore
+    editor = nano
+[alias]
+    lg = log --graph --decorate --pretty=oneline --abbrev-commit
+    lga = !git lg --all
+[push]
+    default = current

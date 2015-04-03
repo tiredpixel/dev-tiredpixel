@@ -1,0 +1,21 @@
+# Setting up dnsmasq on Ubuntu (working with Network Manager), allowing subdomains
+# for Apache
+# 
+# This will enable subdomain.vmhostname to be resolved without having to explicitly
+# add it to `/etc/hosts`.
+
+# install dnsmasq
+sudo apt-get install dnsmasq
+
+# uncomment the following line in `/etc/dhcp/dhclient.conf`:
+prepend domain-name-servers 127.0.0.1; 
+
+# add entry to `/etc/dnsmasq.conf` with correct IP:
+address=/vmhostname/192.168.56.2
+
+# restart dnsmasq
+sudo service dnsmasq restart
+
+# verify can reach entry
+ping vmhostname
+ping subdomain.vmhostname
