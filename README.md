@@ -17,6 +17,8 @@ May you find peace, and help others to do likewise.
 
 ## Licence
 
-© [tiredpixel](https://www.tiredpixel.com) 2015.
-It is free software, released under the MIT License, and may be redistributed
-under the terms specified in `LICENSE`.
+Many of the snippets in this repository are so short as for me to not consider
+them copyrightable. Other snippets might have been based on other sources, so
+even to attach a copyright doesn't seem accurate. For newer, longer snippets,
+I'll attempt to add an explicit licence in the directory or source files. For
+an older snippet, please get in touch if it bothers you.
