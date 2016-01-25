@@ -1,0 +1,16 @@
+---
+web:
+  build: "."
+  env_file: ".env"
+  volumes:
+    - ".:/srv/app/:ro"
+    - "./dist/:/srv/app/dist/"
+    - "./static/tmp/:/srv/app/static/tmp/"
+    - "./yesod-devel/:/srv/app/yesod-devel/"
+  ports:
+    - "127.0.0.1::3000" # HTTP
+    - "127.0.0.1::3443" # HTTPS; or `127.0.0.1:3443:3443` with fixed SSL port
+  tty: true # needed for yesod-devel ?
+  command: "yesod devel -p 3000 -q 3443"
+postgres:
+  image: "postgres:9.5.0"
