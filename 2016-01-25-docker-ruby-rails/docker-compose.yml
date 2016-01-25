@@ -1,0 +1,15 @@
+---
+web:
+  build: "."
+  env_file: ".env"
+  volumes:
+    - ".:/srv/app/:ro"
+    - "./public/:/srv/app/public/"
+    - "./tmp/:/srv/app/tmp/"
+  ports:
+    - "127.0.0.1::8080"
+  command: "bundle exec thin start -p 8080"
+postgres:
+  image: "postgres:9.3.10"
+redis:
+  image: "redis:3.0.5"
