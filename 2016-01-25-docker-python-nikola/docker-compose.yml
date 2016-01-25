@@ -1,0 +1,9 @@
+---
+web:
+  build: "."
+  env_file: ".env"
+  volumes:
+    - ".:/srv/site/" # not ro :(
+  ports:
+    - "127.0.0.1::8080"
+  command: "nikola serve -p 8080"
