@@ -1,0 +1,9 @@
+#!/bin/sh
+
+stack=$1
+shift
+
+project=${PWD##*/}
+
+
+docker-compose -f docker-compose.${stack}.yml -p ${project}${stack} $@
